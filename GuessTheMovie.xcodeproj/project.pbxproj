@@ -49,6 +49,8 @@
 		03A78CDF265E6D120096CF58 /* GuessTheMovieUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GuessTheMovieUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		03A78CE3265E6D120096CF58 /* GuessTheMovieUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuessTheMovieUITests.swift; sourceTree = "<group>"; };
 		03A78CE5265E6D120096CF58 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		03A78CF5265E6D840096CF58 /* NetworkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
+		03A78CF7265E6D950096CF58 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,8 @@
 			children = (
 				03A78CC1265E6D100096CF58 /* AppDelegate.swift */,
 				03A78CC3265E6D100096CF58 /* SceneDelegate.swift */,
+				03A78CF6265E6D950096CF58 /* Models */,
+				03A78CF4265E6D840096CF58 /* NetworkService */,
 				03A78CC5265E6D100096CF58 /* ViewController.swift */,
 				03A78CC7265E6D100096CF58 /* Main.storyboard */,
 				03A78CCA265E6D120096CF58 /* Assets.xcassets */,
@@ -126,6 +130,22 @@
 				03A78CE5265E6D120096CF58 /* Info.plist */,
 			);
 			path = GuessTheMovieUITests;
+			sourceTree = "<group>";
+		};
+		03A78CF4265E6D840096CF58 /* NetworkService */ = {
+			isa = PBXGroup;
+			children = (
+				03A78CF5265E6D840096CF58 /* NetworkClient.swift */,
+			);
+			path = NetworkService;
+			sourceTree = "<group>";
+		};
+		03A78CF6265E6D950096CF58 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				03A78CF7265E6D950096CF58 /* Movie.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
