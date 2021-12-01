@@ -1,26 +1,16 @@
 //
-//  NetworkClient.swift
-//  CompleteTheMovieTitle
+//  NetworkManager.swift
+//  GuessTheMovie
 //
-//  Created by Osama Gamal on 25/05/2021.
+//  Created by Yasmin Mohsen on 01/12/2021.
 //
 
 import Foundation
-/// Example Usage:
-/// ```
-/// class MyRequest: RequestProtocol {
-///     var url: URL {
-///         return URL()
-///     }
-/// }
-/// ```
-protocol RequestProtocol {
-    var url: URL { get }
-}
-
-class NetworkClient {
-    func get(request: RequestProtocol, completion: @escaping (Result<Data, Error>) -> ()){
-        let urlRequest = URLRequest(url: request.url)
+class Networkmanager :ApiServices{
+    
+    func get(request: URL, completion: @escaping (Result<Data, Error>) -> ()){
+        //let urlRequest = URLRequest(url: request.url)
+        let urlRequest  = request
         URLSession.shared.dataTask(with: urlRequest) { (data, response, error) in
             if error != nil {
                 completion(.failure(NetworkError.networkError))
@@ -39,3 +29,11 @@ enum NetworkError: Error {
     case noData
     case networkError
 }
+    
+    
+    
+    
+    
+    
+    
+

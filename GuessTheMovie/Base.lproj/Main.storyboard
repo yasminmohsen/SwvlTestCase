@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="fFe-Px-x26">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="fFe-Px-x26">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -10,7 +10,7 @@
         <!--View Controller-->
         <scene sceneID="JiL-V0-gXZ">
             <objects>
-                <viewController id="fFe-Px-x26" customClass="ViewController" customModule="CompleteTheMovieTitle" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="fFe-Px-x26" customClass="ViewController" customModule="GuessTheMovie" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="OFZ-cC-gw7">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -70,6 +70,10 @@
                                     <constraint firstAttribute="height" constant="110" id="NHd-EA-9lO"/>
                                 </constraints>
                             </stackView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="VCm-xR-Y9T">
+                                <rect key="frame" x="188.5" y="429.5" width="37" height="37"/>
+                                <color key="color" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="gcY-2z-8Es"/>
                         <color key="backgroundColor" red="0.1812787297" green="0.1812787297" blue="0.1812787297" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -77,8 +81,10 @@
                             <constraint firstItem="08C-sA-NJd" firstAttribute="top" secondItem="Sd8-W8-P3y" secondAttribute="bottom" constant="30" id="27W-0b-KVA"/>
                             <constraint firstAttribute="trailing" secondItem="Sd8-W8-P3y" secondAttribute="trailing" constant="20" id="4uW-OC-31r"/>
                             <constraint firstItem="Sd8-W8-P3y" firstAttribute="top" secondItem="eAL-46-1Er" secondAttribute="bottom" constant="20" id="9XR-dD-yke"/>
+                            <constraint firstItem="VCm-xR-Y9T" firstAttribute="centerX" secondItem="OFZ-cC-gw7" secondAttribute="centerX" id="C1o-wb-LOO"/>
                             <constraint firstItem="gcY-2z-8Es" firstAttribute="trailing" secondItem="08C-sA-NJd" secondAttribute="trailing" constant="20" id="MGH-tF-wtb"/>
                             <constraint firstItem="eAL-46-1Er" firstAttribute="top" secondItem="OFZ-cC-gw7" secondAttribute="top" id="SbA-yU-dLz"/>
+                            <constraint firstItem="VCm-xR-Y9T" firstAttribute="centerY" secondItem="OFZ-cC-gw7" secondAttribute="centerY" id="V4R-PX-mgo"/>
                             <constraint firstItem="08C-sA-NJd" firstAttribute="leading" secondItem="gcY-2z-8Es" secondAttribute="leading" constant="20" id="fGx-ka-sor"/>
                             <constraint firstItem="Sd8-W8-P3y" firstAttribute="leading" secondItem="gcY-2z-8Es" secondAttribute="leading" constant="20" id="kaZ-5e-7ab"/>
                             <constraint firstItem="eAL-46-1Er" firstAttribute="height" secondItem="OFZ-cC-gw7" secondAttribute="height" multiplier="0.656" id="lg8-Nc-AUx"/>
@@ -87,8 +93,13 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="activityIndicator" destination="VCm-xR-Y9T" id="cvy-Cy-tnc"/>
                         <outlet property="movieImageView" destination="eAL-46-1Er" id="c66-TT-3tI"/>
                         <outlet property="movieTitleLabel" destination="Sd8-W8-P3y" id="QbG-Fr-P6p"/>
+                        <outletCollection property="answersButtons" destination="YNz-U7-kfb" collectionClass="NSMutableArray" id="h2x-Gw-ioi"/>
+                        <outletCollection property="answersButtons" destination="X0U-GG-xmn" collectionClass="NSMutableArray" id="FCh-ap-uQI"/>
+                        <outletCollection property="answersButtons" destination="s1k-Ig-amU" collectionClass="NSMutableArray" id="LgT-JT-u5A"/>
+                        <outletCollection property="answersButtons" destination="DZ2-0t-Fin" collectionClass="NSMutableArray" id="jdG-m6-UYn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KYd-AR-gwA" sceneMemberID="firstResponder"/>
